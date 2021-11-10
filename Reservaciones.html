@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Reservaciones</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFuncionesReservas.js"></script>  
+</head>
+
+<body>
+    <span style="color:forestgreen"><center><h2>RESERVACIONES</h2></center></span>
+    <!--Imagen como link-->
+    <a href="index.html">
+    <img src="atras.png" alt="Boton para regresar" style="width:42px;height:42px;"></a>
+    <center>
+    <!--Formulario Categoria-->
+    <fieldset style="width: 15%">
+    <legend>Registro y consulta de Reservaciones</legend>
+    <center>
+    <table>
+    <tbody>
+        <div>
+            <tr>  
+                <td><span style="color:rgb(94, 202, 22)"><center><b>Fecha Inicio</b></center></span></td>
+                <td><input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br></td>
+            </tr>
+            <tr>
+                <td><span style="color:rgb(94, 202, 22)"><center><b>Fecha Devolucion</b></center></span></td>
+                <td><input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br></td>
+            </tr>
+            <tr>
+                <td><span style="color:rgb(94, 202, 22)"><center><b>Estado de Reservacion "completed/cancelled</b></center></span></td>
+                <td><input class="controlReservation" type="text" id="status" placeholder="Escriba completed o cancelled para el estado de la Reservacion "></td>
+            </tr>
+            <tr>
+                <td><select id="select-client"></select>
+                    <script type="text/javascript">
+                        window.onload = autoInicioRelacionCliente();
+                    </script>
+                </td>
+                <td>
+                    <select id="select-finca"></select>
+                    <script type="text/javascript">
+                        window.onload = autoIniciofinca();
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td><center><button  id="button1" onclick=" agregarReservation()">Guardar Reserva</button></center></td>
+                <td><center><button  id="button1" onclick=" listarReservation()">Consultar Reservas</button></center></td>
+            </tr>
+        </div>
+    </tbody>
+    </table>
+    </center>      
+    </fieldset>
+
+    <center><div id="miListaReservation"></div></center>
+
+</body>
+</html>

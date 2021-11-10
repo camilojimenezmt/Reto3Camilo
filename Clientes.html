@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clientes</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFuncionesClientes.js"></script>  
+</head>
+<body>
+    <span style="color:forestgreen"><center><h2>CLIENTES</h2></center></span>
+    <!--Imagen como link-->
+    <a href="index.html">
+    <img src="atras.png" alt="Boton para regresar" style="width:42px;height:42px;"></a>
+    <center>
+<!--Registro y consulta de la tabla cliente-->
+    <fieldset style="width: 15%">
+    <legend>Registro y consulta de Clientes</legend>
+    <center>
+    <table>
+    <tbody>
+    <div>
+        <tr>
+            <td><span style="color:rgb(94, 202, 22)"><center><b>Correo</b></center></span></td>
+            <td><input type="text" id="Clemail" placeholder="Email"></td>
+        </tr>
+        <tr>
+<td><span style="color:rgb(94, 202, 22)"><center><b>Contraseña</b></center></span></td>
+            <td><input type="text" id="Clpassword" placeholder="Password"></td>
+        </tr>
+        <tr>
+<td><span style="color:rgb(94, 202, 22)"><center><b>Nombre</b></center></span></td>
+            <td><input type="text" id="Clname" placeholder="Nombre"></td>
+        </tr>
+
+        <tr>
+<td><span style="color:rgb(94, 202, 22)"><center><b>Edad</b></center></span></td>
+            <td><input type="number" id="Clage" placeholder="Edad"></td>
+        </tr>
+        <tr>
+            <td><center><button id="button1" onclick="guardarInformacionCliente()">Guardar Cliente</button></center></td>
+            <td><center><button id="button1" onclick="autoInicioCliente()">Consultar Clientes</button></center></td>
+        </tr>
+    </div>
+    </tbody>
+    </table>
+    </center>      
+    </fieldset>
+
+<!--Muestra la tabla clientes-->
+    <center>
+        <div id="resultado3"></div>
+        <script type="text/javascript"> 
+            window.onload = autoInicioCliente();
+        </script>
+    </center>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Categorias</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/misFuncionesCategorias.js"></script>  
+</head>
+
+<body>
+<span style="color:forestgreen"><center><h2>CATEGORIAS</h2></center></span>
+    <!--Imagen como link-->
+    <a href="index.html">
+    <img src="atras.png" alt="Boton para regresar" style="width:42px;height:42px;"></a>
+    <center>
+    <!--Formulario Categoria-->
+    <fieldset style="width: 15%">
+        <legend>Registro y consulta de Categorias</legend>
+    <table>
+    <tbody>
+    
+    <tr>
+        <td><span style="color:rgb(94, 202, 22)"><center><b>Nombre</b></center></span></td>
+        <td><input type="text" id="Cname" placeholder="Nombre"></td>
+    </tr>
+    <tr>
+        <td><span style="color:rgb(94, 202, 22)"><center><b>Descripción</b></center></span></td>
+        <td><input type="text" id="Cdescription" placeholder="Descripcion"></td>
+    </tr>
+       
+    <tr>
+        <td><center><button onclick="guardarInformacionCategorias()">Guardar Categorias</button></center></td>
+        <td><center><button onclick="traerInformacionCategorias()">Consultar Categorias</button></center></td>
+    </tr>
+    </tbody>      
+    </table>
+    </fieldset>
+    <div id="resultado1"></div>
+</body>
+</html>
